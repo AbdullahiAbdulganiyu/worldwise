@@ -3,7 +3,7 @@ import styles from "./PageNav.module.css";
 
 function PageNav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <li>
           <NavLink to="/">HomePage</NavLink>
