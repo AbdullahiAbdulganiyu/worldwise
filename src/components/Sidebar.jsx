@@ -1,4 +1,5 @@
 import AppNav from "./AppNav";
+import Footer from "./Footer";
 import Logo from "./Logo";
 import styles from "./Sidebr.module.css";
 
@@ -9,12 +10,7 @@ function Sidebar() {
       <AppNav />
 
       <p>Listof countries</p>
-
-      <footer className={styles.footer}>
-        <p className={styles.copyright}>
-          &copy;:Copyright{new Date().getFullYear} by WorldWise Inc.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
