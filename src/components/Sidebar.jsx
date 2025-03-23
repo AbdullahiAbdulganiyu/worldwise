@@ -1,7 +1,7 @@
 import AppNav from "./AppNav";
 import Footer from "./Footer";
 import Logo from "./Logo";
-import styles from "./Sidebr.module.css";
+import styles from "./Sidebar.module.css";
 
 function Sidebar() {
   return (
