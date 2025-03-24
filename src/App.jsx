@@ -6,8 +6,12 @@ import AppLayout from "./pages/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
+import { useState } from "react";
 
 function App() {
+  const [cities, setCities] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <BrowserRouter>
       <Routes>
