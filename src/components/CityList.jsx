@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import Spinner from "./Spinner";
+import CityItem from "./CityItem";
 import styles from "./CityList.module.css";
 
 function CityList({ cities, isLoading }) {
