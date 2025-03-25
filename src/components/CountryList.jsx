@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Spinner from "./Spinner";
 import Message from "./Message";
-import CityItem from "./CityItem";
+import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.css";
 
 function CountryList({ cities, isLoading }) {
@@ -10,10 +10,12 @@ function CountryList({ cities, isLoading }) {
     return (
       <Message message="Add your first city by clicking a city on the map" />
     );
+
+  const countries = [];
   return (
     <ul className={styles.countryList}>
-      {cities.map((city) => (
-        <CityItem city={city} key={city.id} />
+      {countries.map((country) => (
+        <CountryItem country={country} key={country.id} />
       ))}
     </ul>
   );
