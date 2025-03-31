@@ -1,16 +1,15 @@
-/* eslint-disable no-undef */
 import styles from "./City.module.css";
 import { useParams } from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 
-// const formatDate = (date) =>
-//   new Intl.DateTimeFormat("en", {
-//     day: "numeric",
-//     month: "long",
-//     year: "numeric",
-//     weekday: "long",
-//   }).format(new Date(date));
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    weekday: "long",
+  }).format(new Date(date));
 
 function City() {
   const { id } = useParams();
