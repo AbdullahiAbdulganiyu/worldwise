@@ -13,11 +13,11 @@ import { useParams, useSearchParams } from "react-router-dom";
 function City() {
   const { id } = useParams();
 
-  // eslint-disable-next-line no-unused-vars
-  const [searchParams, setSearchParams] = useSearchParams();
+  // // eslint-disable-next-line no-unused-vars
+  // const [searchParams, setSearchParams] = useSearchParams();
 
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+  // const lat = searchParams.get("lat");
+  // const lng = searchParams.get("lng");
 
   // TEMP DATA
   // const currentCity = {
