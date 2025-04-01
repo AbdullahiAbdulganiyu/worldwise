@@ -32,7 +32,7 @@ function Map() {
           >
             <Popup>
               <span>{city.emoji}</span>
-              <span>{city.countryName}</span>
+              <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}
