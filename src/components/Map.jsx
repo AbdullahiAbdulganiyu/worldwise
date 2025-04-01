@@ -1,14 +1,14 @@
-/* eslint-disable no-unused-vars */
-import { useNavigate, useSearchParams } from "react-router-dom";
+// import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 function Map() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  //   const [searchParams, setSearchParams] = useSearchParams();
 
   const navigate = useNavigate();
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+  //   const lat = searchParams.get("lat");
+  //   const lng = searchParams.get("lng");
 
   return (
     <div className={styles.mapContainer} onClick={() => navigate("form")}>
