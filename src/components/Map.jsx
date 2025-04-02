@@ -73,7 +73,7 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   const navigate = useNavigate();
   useMapEvents({
-    click: (e) => navigate("form"),
+    click: () => navigate("form"),
   });
 }
 export default Map;
