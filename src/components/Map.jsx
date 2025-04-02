@@ -1,9 +1,16 @@
 /* eslint-disable react/prop-types */
 // import { useNavigate, useSearchParams } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import styles from "./Map.module.css";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -11,7 +18,6 @@ import { useState } from "react";
 function Map() {
   const [searchParams] = useSearchParams();
 
-  //   const navigate = useNavigate();
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
 
@@ -61,5 +67,12 @@ function ChangeCenter({ position }) {
   map.setView(position);
 
   return null;
+}
+
+function DetectClick() {
+  const navigate = useNavigate();
+  useMapEvents({
+    click: (e) => navigate("form"),
+  });
 }
 export default Map;
