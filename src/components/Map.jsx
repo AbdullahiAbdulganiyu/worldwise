@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { useNavigate, useSearchParams } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
