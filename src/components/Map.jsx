@@ -6,11 +6,11 @@ import { useCities } from "../contexts/CitiesContext";
 import { useState } from "react";
 
 function Map() {
-  //   const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   //   const navigate = useNavigate();
-  //   const lat = searchParams.get("lat");
-  //   const lng = searchParams.get("lng");
+  const mapLat = searchParams.get("lat");
+  const mapLng = searchParams.get("lng");
 
   const [mapPosition] = useState([40, 0]);
 
@@ -19,7 +19,8 @@ function Map() {
   return (
     <div className={styles.mapContainer}>
       <MapContainer
-        center={mapPosition}
+        // center={mapPosition}
+        center={(mapLat, mapLng)}
         zoom={13}
         scrollWheelZoom={false}
         className={styles.map}
