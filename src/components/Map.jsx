@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import styles from "./Map.module.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useCities } from "../contexts/CitiesContext";
-import { useState } from "react";
+// import { useState } from "react";
 
 function Map() {
   const [searchParams] = useSearchParams();
@@ -13,7 +13,7 @@ function Map() {
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
 
-  const [mapPosition] = useState([40, 0]);
+  //   const [mapPosition] = useState([40, 0]);
 
   const { cities } = useCities();
 
