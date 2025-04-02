@@ -3,6 +3,7 @@
 import styles from "./Map.module.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useCities } from "../contexts/CitiesContext";
+import { useState } from "react";
 
 function Map() {
   //   const [searchParams, setSearchParams] = useSearchParams();
@@ -11,12 +12,14 @@ function Map() {
   //   const lat = searchParams.get("lat");
   //   const lng = searchParams.get("lng");
 
+  const [mapPosition] = useState([40, 0]);
+
   const { cities } = useCities();
 
   return (
     <div className={styles.mapContainer}>
       <MapContainer
-        center={[51.505, -0.09]}
+        center={mapPosition}
         zoom={13}
         scrollWheelZoom={false}
         className={styles.map}
