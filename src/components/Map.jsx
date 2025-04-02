@@ -41,6 +41,8 @@ function Map() {
             </Popup>
           </Marker>
         ))}
+
+        <ChangeCenter position={(mapLat || 40, mapLng || 0)} />
       </MapContainer>
     </div>
   );
