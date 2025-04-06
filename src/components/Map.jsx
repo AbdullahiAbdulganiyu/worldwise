@@ -27,7 +27,7 @@ function Map() {
 
   useEffect(
     function () {
-      setMapPosition([mapLat, mapLng]);
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
     },
     [mapLat, mapLng]
   );
