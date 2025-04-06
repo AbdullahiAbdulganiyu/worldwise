@@ -39,7 +39,7 @@ function City() {
   //   notes: "My favorite city so far!",
   // };
 
-  const { cityName, emoji, date, notes } = currentCity;
+  const { cityName, emoji, date, notes } = currentCity[0];
   if (isLoading) return <Spinner />;
   return (
     <div className={styles.city}>
