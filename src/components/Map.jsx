@@ -58,7 +58,7 @@ function Map() {
           );
         })}
 
-        <ChangeCenter position={mapPosition} />
+        <ChangeCenter position={[mapLat || 40, mapLng || 0]} />
         <DetectClick />
       </MapContainer>
     </div>
