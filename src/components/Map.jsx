@@ -14,17 +14,17 @@ import {
 import { useCities } from "../contexts/CitiesContext";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useGeolocation } from "../hooks/useGeolocation";
+// import { useGeolocation } from "../hooks/useGeolocation";
 
 function Map() {
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
   const [searchParams] = useSearchParams();
-  const {
-    isLoading: isLoadingGeolocation,
-    postion: geolocationPosition,
-    getPosition,
-  } = useGeolocation();
+  //   const {
+  //     isLoading: isLoadingGeolocation,
+  //     postion: geolocationPosition,
+  //     getPosition,
+  //   } = useGeolocation();
 
   const mapLat = searchParams.get("lat");
   const mapLng = searchParams.get("lng");
